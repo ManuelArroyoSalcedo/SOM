@@ -24,6 +24,10 @@ La virtualización permite disponer de varios ordenadores en un único ordenador
 
 > La **virtualización** es una tecnología que permite crear recursos virtuales, como ordenadores, discos duros o redes, que funcionan como si fueran recursos físicos.
 
+> [!NOTE]
+>
+> **Nota:** En este contexto, **virtual** significa creado mediante software, no físico.
+
 En este módulo nos centraremos en la virtualización de ordenadores. Gracias a esta tecnología es posible crear ordenadores virtuales sobre los que instalar y ejecutar un sistema operativo, del mismo modo que se haría en un ordenador físico.
 
 Cada uno de estos ordenadores virtuales funciona de forma independiente y dispone de sus propios recursos virtuales, como procesador, memoria RAM, almacenamiento o adaptadores de red. Además, puede tener instalado su propio sistema operativo, sus aplicaciones y su propia configuración, comportándose de forma muy similar a un ordenador físico.
