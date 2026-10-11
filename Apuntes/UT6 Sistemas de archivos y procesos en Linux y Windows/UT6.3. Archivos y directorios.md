@@ -93,7 +93,7 @@ Las principales características y la información asociada a un inodo son:
 - **Referencias a bloques de datos:** Permiten localizar los bloques donde se encuentra almacenado el contenido del archivo.
 - **Fechas y horas:** Información sobre el último acceso, la última modificación del contenido y el último cambio de los metadatos.
 
-![Infografía_ Inodos en Linux](./img/Infografia_ Inodos_en_Linux.png)
+![Infografía_ Inodos en Linux](./img/Infografia_Inodos_en_Linux.png)
 
 **Una característica importante es que el inodo no almacena el nombre del archivo.**
 
