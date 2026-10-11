@@ -93,7 +93,7 @@ Las principales características y la información asociada a un inodo son:
 - **Referencias a bloques de datos:** Permiten localizar los bloques donde se encuentra almacenado el contenido del archivo.
 - **Fechas y horas:** Información sobre el último acceso, la última modificación del contenido y el último cambio de los metadatos.
 
-![Infografía_ Inodos en Linux](./img/Infografía_ Inodos en Linux.png)
+![Infografía_ Inodos en Linux](./img/Infografia_ Inodos_en_Linux.png)
 
 **Una característica importante es que el inodo no almacena el nombre del archivo.**
 
@@ -185,7 +185,7 @@ Las principales características de los enlaces simbólicos son:
 | Enlaces entre sistemas de archivos diferentes | No se permiten.                                              | Sí se permiten.                                              |
 | Eliminación del nombre original               | El archivo sigue siendo accesible mediante el otro enlace físico. | El enlace deja de funcionar si la ruta almacenada ya no existe. |
 
-![Comparativa de enlaces Linux_ físicos y simbólicos](./img/Comparativa de enlaces Linux_ físicos y simbólicos.png)
+![Comparativa de enlaces Linux_ físicos y simbólicos](./img/Comparativa_de_enlaces_Linux_fisicos_y_simbolicos.png)
 
 #### Enlaces en Windows
 

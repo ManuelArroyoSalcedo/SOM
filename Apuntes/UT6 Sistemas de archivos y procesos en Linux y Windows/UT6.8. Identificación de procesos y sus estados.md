@@ -11,7 +11,7 @@ Durante su ejecución, un proceso puede encontrarse en diferentes estados. Los m
 - **Bloqueado**, cuando está esperando a que se produzca algún evento, por ejemplo, la finalización de una operación de entrada y salida.
 - **Finalizado**, cuando ha terminado su ejecución.
 
-![Estados de un proceso en el sistema operativo](./img/Estados de un proceso en el sistema operativo.png)
+<img src="./img/Estados_de_un_proceso_en_el_sistema_operativo.png" alt="Estados de un proceso en el sistema operativo" style="zoom:67%;" />
 
 ### 6.8.1. Identificación de procesos
 
