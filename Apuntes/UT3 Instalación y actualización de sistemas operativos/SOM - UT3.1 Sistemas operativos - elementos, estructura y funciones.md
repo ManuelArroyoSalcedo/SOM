@@ -274,14 +274,9 @@ El sistema operativo también se encarga de:
 - Coordinar el acceso de los procesos a los recursos del sistema.
 - Evitar que un proceso interfiera de forma incorrecta con otros procesos.
 
-Durante su ejecución, un proceso puede encontrarse en diferentes estados. Los más habituales son:
-
-- **En ejecución**, cuando está utilizando el procesador.
-- **Preparado**, cuando está listo para ejecutarse y espera a que el procesador quede disponible.
-- **Bloqueado**, cuando está esperando a que se produzca algún evento, por ejemplo, la finalización de una operación de entrada y salida.
-- **Finalizado**, cuando ha terminado su ejecución.
-
 La gestión de procesos es fundamental para conseguir que varios programas puedan ejecutarse de forma eficiente y aparentemente simultánea.
+
+**Nota:** Los diferentes estados en los que puede encontrarse un proceso y su identificación mediante las herramientas de Linux y Windows se estudiarán en la UT6.
 
 ##### Planificación de procesos
 
