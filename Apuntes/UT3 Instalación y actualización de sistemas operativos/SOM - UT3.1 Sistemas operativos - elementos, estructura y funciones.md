@@ -276,8 +276,6 @@ El sistema operativo también se encarga de:
 
 La gestión de procesos es fundamental para conseguir que varios programas puedan ejecutarse de forma eficiente y aparentemente simultánea.
 
-**Nota:** Los diferentes estados en los que puede encontrarse un proceso y su identificación mediante las herramientas de Linux y Windows se estudiarán en la UT6.
-
 ##### Planificación de procesos
 
 En un sistema multitarea pueden existir varios procesos preparados para ejecutarse al mismo tiempo. Sin embargo, el procesador solo puede ejecutar un número limitado de procesos de forma simultánea, dependiendo del número de núcleos disponibles.
@@ -316,7 +314,7 @@ En el eje horizontal se representa el tiempo y cada bloque indica el proceso que
 
 Por ejemplo:
 
-`0 | P1 | 4 | P2 | 7 | P3 | 12`
+![](./img/Gantt.png)
 
 Este diagrama indica que:
 
@@ -334,7 +332,7 @@ El **tiempo de llegada** indica el instante en el que un proceso entra en la col
 
 Se suele representar como:
 
-`TL`
+`ti`
 
 Si todos los procesos están disponibles desde el comienzo, su tiempo de llegada será 0.
 
@@ -344,11 +342,11 @@ El **tiempo de ejecución** indica el tiempo total de CPU que necesita un proces
 
 Se suele representar como:
 
-`TE`
+`t`
 
 Por ejemplo, si un proceso necesita utilizar la CPU durante 6 unidades de tiempo, su tiempo de ejecución será:
 
-`TE = 6`
+`t = 6`
 
 ###### Tiempo de finalización
 
@@ -358,7 +356,7 @@ Se puede obtener directamente observando el punto del diagrama de Gantt en el qu
 
 Se suele representar como:
 
-`TF`
+`tf`
 
 ###### Tiempo de retorno
 
@@ -366,13 +364,13 @@ El **tiempo de retorno** es el tiempo total transcurrido desde que el proceso ll
 
 Se calcula mediante:
 
-`TR = TF - TL`
+`TR = tf - ti`
 
 donde:
 
 - `TR` es el tiempo de retorno.
-- `TF` es el tiempo de finalización.
-- `TL` es el tiempo de llegada.
+- `tf` es el tiempo de finalización.
+- `ti` es el tiempo de llegada del proceso.
 
 Por ejemplo, si un proceso llega en el instante 2 y termina en el instante 10:
 
@@ -384,11 +382,11 @@ El **tiempo de espera** es el tiempo total que un proceso permanece en la cola d
 
 Se calcula restando al tiempo de retorno el tiempo que realmente ha estado utilizando el procesador:
 
-`TEspera = TR - TE`
+`TE = TR - t`
 
 Por ejemplo, si un proceso tiene un tiempo de retorno de 8 unidades y ha necesitado 5 unidades de CPU:
 
-`TEspera = 8 - 5 = 3`
+`TE = 8 - 5 = 3`
 
 Esto significa que el proceso ha permanecido durante 3 unidades de tiempo esperando en la cola de procesos preparados.
 
@@ -400,15 +398,19 @@ El **índice de servicio** permite relacionar el tiempo que un proceso permanece
 
 Se calcula mediante:
 
-`Índice = TR / TE`
+$$
+I = \frac{t}{TR}
+$$
 
-Cuanto más próximo sea el valor a **1**, menor tiempo adicional ha permanecido el proceso esperando.
+Su valor es mayor que 0 y menor o igual que 1. Cuanto más próximo sea el valor a **1**, menor será la proporción de tiempo que el proceso ha permanecido esperando.
 
 Por ejemplo, si un proceso necesita 4 unidades de CPU y su tiempo de retorno ha sido de 8 unidades:
 
-`Índice = 8 / 4 = 2`
+$$
+I = \frac{4}{8} = 0,5
+$$
 
-Esto significa que el proceso ha permanecido en el sistema el doble del tiempo que necesitaba realmente para ejecutarse.
+Esto significa que el proceso ha utilizado la CPU durante el 50 % del tiempo que ha permanecido en el sistema.
 
 ##### Tiempos medios
 
@@ -416,15 +418,21 @@ Para comparar diferentes algoritmos de planificación no suele ser suficiente co
 
 El **tiempo medio de espera** se obtiene sumando los tiempos de espera de todos los procesos y dividiendo el resultado entre el número de procesos:
 
-`Tiempo medio de espera = suma de los tiempos de espera / número de procesos`
+$$
+TE_{\text{medio}} = \frac{\text{suma de los tiempos de espera}}{\text{número de procesos}}
+$$
 
 De la misma forma, el **tiempo medio de retorno** se calcula mediante:
 
-`Tiempo medio de retorno = suma de los tiempos de retorno / número de procesos`
+$$
+TR_{\text{medio}} = \frac{\text{suma de los tiempos de retorno}}{\text{número de procesos}}
+$$
 
 También puede calcularse el **índice medio**:
 
-`Índice medio = suma de los índices / número de procesos`
+$$
+IS_{\text{medio}} = \frac{\text{suma de los índices}}{\text{número de procesos}}
+$$
 
 Estos valores permiten comparar diferentes algoritmos de planificación. En general, un algoritmo será más eficiente cuanto menores sean los tiempos medios de espera y de retorno de los procesos.
 
